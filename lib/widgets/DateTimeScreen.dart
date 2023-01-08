@@ -1,4 +1,3 @@
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import "package:flutter/material.dart";
@@ -16,13 +15,13 @@ class _Date_TimeState extends State<Date_Time> {
 
   var formatter = "TOday";
 
- /// The function takes the current date and formats it to a string
+  /// The function takes the current date and formats it to a string
   void setDate() {
-    formatter = DateFormat().format(now);
+    formatter = DateFormat().add_yMMMEd().format(now);
     print(formatter);
   }
 
- /// The initState() function is called when the widget is inserted into the widget tree
+  /// The initState() function is called when the widget is inserted into the widget tree
   void initState() {
     super.initState();
     setDate();
@@ -36,13 +35,13 @@ class _Date_TimeState extends State<Date_Time> {
   @override
   Widget build(BuildContext context) {
     return Container(
-     /// Creating a column with two text widgets.
+      /// Creating a column with two text widgets.
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding:  EdgeInsets.only(left: 20,top: 25),
+            padding: EdgeInsets.only(left: 20, top: 25),
             child: Text(
               "Today",
               style: GoogleFonts.lato(
@@ -54,7 +53,9 @@ class _Date_TimeState extends State<Date_Time> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20,),
+            padding: const EdgeInsets.only(
+              left: 20,
+            ),
             child: Text(
               formatter,
               style: GoogleFonts.lato(

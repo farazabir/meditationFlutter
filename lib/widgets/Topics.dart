@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meditation/screen/musicScreen.dart';
 
 class Topics extends StatelessWidget {
   const Topics({super.key});
@@ -37,25 +38,35 @@ class Topics extends StatelessWidget {
                     padding: EdgeInsets.only(
                       left: 20,
                     ),
-                    child: Center(
-                      child: Container(
-                        height: 120,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Color(0xfffA260E5),
-                            image: DecorationImage(
-                                image: AssetImage("images/calm.png"))),
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 90),
-                          child: Center(
-                            child: Text(
-                              "Calm",
-                              style: GoogleFonts.raleway(
-                                  textStyle: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              )),
+                    child: GestureDetector(
+                      onTap: () {
+                         Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>MusicScreen() ,
+              ),
+            );
+                      },
+                      child: Center(
+                        child: Container(
+                          height: 120,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color(0xfffA260E5),
+                              image: DecorationImage(
+                                  image: AssetImage("images/calm.png"))),
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 90),
+                            child: Center(
+                              child: Text(
+                                "Calm",
+                                style: GoogleFonts.raleway(
+                                    textStyle: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                              ),
                             ),
                           ),
                         ),

@@ -39,6 +39,10 @@ dependencies:
   google_fonts: ^3.0.1
   flat_icons_flutter: ^1.0.2
   intl: ^0.18.0
+  lottie: ^2.1.0
+  hexcolor: ^3.0.1
+  just_audio: ^0.9.31
+  audioplayers: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +74,15 @@ flutter:
     - images/healing.png
     - images/sleep.png
     - images/yoga.png
+    - images/splash.mp4
+    - images/logo.json
+    - images/unsplash-1.jpg
+    - images/unsplash-4.jpg
+    - images/unsplash-5.jpg
+    - images/unsplash-7.jpg
+    - images/unsplash-8.jpg
+    - images/unsplash-9.jpg
+    - images/unsplash-6.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
